@@ -1,2 +1,2 @@
 # ajudai
- Project for university, site for registration 
+ Project for university, site for job offer
