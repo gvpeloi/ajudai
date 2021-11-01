@@ -63,3 +63,20 @@ form input[type=text]:focus{
 form input[type=password]:focus{
    outline: 0;
 }
+
+div#msg-sucesso{
+    width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #5f8eb3;
+    border: 1px solid #254b68;
+
+}
+
+div.msg-erro{
+    width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #5f8eb3;
+    border: 1px solid #254b68;
+}

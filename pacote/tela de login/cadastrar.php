@@ -19,7 +19,8 @@
             <input id="email" type="text" name="email" placeholder="Usuário"maxlength="40">
             <input type="password" name="senha" placeholder="Senha"maxlength="15">
             <input type="password" name="confSenha" placeholder="Confirmar Senha">
-            <input type="submit" name="acao" value="Cadastrar" />                    
+            <input type="submit" name="acao" value="Cadastrar" />    
+            <a href="sair.php"> >>LOGIN<< </a>                
         </form>
         
 <?php
@@ -34,32 +35,53 @@ if(isset($_POST['nome']))
     //verificar se esta preenchido
     if(!empty($nome) && !empty($telefone) && !empty($email) && !empty($senha) && !empty($confirmarSenha))
     {
-        $u->conectar("projeto_login","localhost", "root", "root" );
+        $u->conectar("projeto_login","localhost", "root", "Mfotografia2409" );
         if($u->msgErro == "")// se esta tudo ok
         {
             if($senha == $confirmarSenha)
             {
                 if($u->cadastrar($nome, $telefone, $email, $senha))
                 {
-                    echo "Cadastrado com sucesso! Acesse para entrar!";
+                    ?>
+                    <div id="msg-sucesso">        
+                        Cadastrado com sucesso! Acesse para entrar!
+                    </div>
+                    <?php
                 }
                 else
                 {
-                    echo "Email ja cadastrado!";
+                    ?>
+                    <div class="msg-erro">
+                        Email ja cadastrado!
+                    </div>
+                    <?php
                 }
             }
             else
             {
-                echo "Senha e confirmar senha não correspondem! ";
+                ?>
+                <div class="msg-erro">
+                    Senha e confirmar senha não correspondem!
+                </div>
+                <?php
             }
         }
         else
         {
-            echo "Erro: ".$u->msgErro;
+            ?>
+            <div class="msg-erro">
+                <?php echo "Erro: ".$u->msgErro;?>
+            </div>
+            <?php
         }
     }else
     {
-        echo "Preencha todos os campos";
+            ?>
+            <div class="msg-erro">
+                Preencha todos os campos!
+            </div>
+            <?php
+        
     }
 }
 

@@ -1,3 +1,9 @@
+<?php
+require_once 'classes/usuarios.php';
+$u = new Usuario;
+
+?>
+
 <html lang="pt-br">
     <head>
         <title>Form contato</title>
@@ -35,7 +41,38 @@
 
         </script>
         <?php
+        if(isset($_POST['email']))
+        {                     
+            $email = addslashes($_POST['email']);
+            $senha = addslashes($_POST['senha']);
+            
+            if(!empty($email) && !empty($senha))
+            {
+                $u->conectar("projeto_login","localhost", "root", "Mfotografia2409" );
+                if($u->msgErro == "")
+                {
+                    if($u->logar($email, $senha))
+                    {
+                        header("location: areaPrivada.php");                                            
+                    }   
+                    else
+                    {
+                        echo"Email e/ou senha estão incorretos!";
+                    } 
+                }
+                else
+                {
+                    echo "Erro: ".$u->msgErro;
+                } 
+            
+            
+            }else
+            {
+                echo "Preencha todos os campos!";
 
-        ?>
-    </body>
+            }
+            
+}
+?>
+</body>
 </html>
