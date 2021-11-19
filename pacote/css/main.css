@@ -1,88 +1,4 @@
-body{
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-}
-/*----------------------(*) ---Aplica a pagina toda--------------*/
-*{  
-    font-family: Arial, Helvetica, sans-serif;
-}
-ul{
-    padding: 0px!important;
-}
-/*------------------------menu onde fica a logo------------------*/
-.menu-principal{ 
-    width: 100%;
-    /*background-color: #252323;*/
-    height: 80px; /*altura*/
-    background-image: url('../img/cabecario.png');
-    
-}
-main, .content {
-    margin: 0 auto;
-    width: 980px;
-    position: relative;
-}
-.logo{ /*logo ajudaí*/
-    float: left;
-    padding: 20px;
-    width: 70%;
-}
-/*-------------------------------MENU PRINCIPAL-----------------*/
-.header-2 {    /*menu inicial*/
-    background-color: #ffffff;
-    width: 980px;
-    margin: 0 auto;
-    padding: 5px;
-}
-.menu-urls{ /*parte branca onde está inicio, sobre e contato*/
-    height: 55px;
-    border-bottom: 3px solid #efefef;
-}
-.menu ul li {
-    display: inline-block;
-    color: #8b8b8b;
-    margin-left: 15px;
-    height: 34px;  /*altura linha do menu baixo*/
-}
-.menu ul li:hover {    /* largura linha do menu baixo*/
-    border-bottom: 2px solid #5aa2d8;
-}
 
-.menu ul li a:hover {  /* cor linha do menu baixo*/
-    color: #5aa2d8 ;    
-}
-.menu ul li a {
-    color: #8b8b8b;
-    text-decoration: none;
-    font-size: 18px;
-    text-transform: uppercase;
-    
-}
-.menu {
-    width: 70%;
-    float: left;
-}
-.entrar{ /*botão ENTRAR*/
-    text-align: center;
-    width: 30%;
-    float: right;
-}
-.entrar button { /*botão ENTRAR escrita */
-    background-position: 25%;
-    color: #FFFFFF;
-    height: 47px;
-    width: 130px;
-    text-transform:uppercase;
-    border: 2px solid #5aa2d8;
-    background-color: #5aa2d8;
-}
-/*------------------------risco do menu ------------------------------*/
-.col-100 {
-    width: 100%;
-    float: left;
-    position: relative;
-}
 /*---------------------------------slide principal-----------------------*/
 
 button.slick-prev{ /*botão para voltar as fotos slide principal*/
@@ -144,206 +60,45 @@ li.slick-active button{ /*bolinhas vai passando as imagens das fotos*/
     min-height: 200px;
     width: 100%;
 }
-/* -------------------------------------------qual serviço especializado você procura------------------*/
-#texto-destaque{ /*qual serviço especializado você procura*/
+
+/*profissionais em destaque*/
+.marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
     text-align: center;
-}
-#texto-destaque h3{ /*qual serviço especializado você procura*/
-    font-size: 25px;
-    text-transform: uppercase;
-    color: #818181;
-}
-/* --------Ache o profissional que você precisa aqui, encanador, eletrecista, carpinteiro...--------*/
-#texto-destaque p{ 
-    font-family:'helvetica';
-    font-size: 14px;
-    text-align:center;
-    text-transform:none;
-    color: #818181;
-}
-/*-----------------campo pesquisa---------------*/
-.pesquisa input { 
-    background-position: 96%;
-    height: 20px;
-    width: 275px;
-    padding: 12px; /*posição*/
-    border: 1px solid #d6d6d6
-}
-/*-------------------CEP----------------------------*/
-.cep input{ 
-    background-position: 96%;
-    height: 20px;
-    width: 191px;
-    padding: 12px; /*posição*/
-    border: 1px solid #d6d6d6
-}
-/*-------------------botão busca----------------------*/
-.busca{ 
-    text-align: center;
-    width: 60%;
-    float: right;
-}
-.busca button{ /*botão BUSCA escrita */
-    background-image: url('../img/busca2.png');
-    background-repeat: no-repeat;
-    background-position: 25%;
-    color: #FFFFFF;
-    height: 36px;
-    width: 130px;
-    text-transform:none;
-    border: 2px solid #5aa2d8;
-    background-color: #5aa2d8;
-}
-/*----------------------posição dos elementos pesquisa, cep, botão----------------------------------*/
-.col-3{
-    width: 33%; /*largura*/
-    float: left;
-    position: relative;
-}
-/*----------------------------------3 PASSOS PARA DIVULGAR SEU SERVIÇO----------------------------*/
-#texto-destaque2{
-    clear:both;
-    text-align: center;
-    color: #818181;
-    padding: 10px;
-}
-.col-4{
-    width: 33%; /*largura*/
-    float: left;
-    position: relative;
-}
-#top-3{
-    clear:both;
-    background-color:#eeeeee;
-    min-height: 500px;
-    width: 100%;
+  }
+  .marketing h2 {
+    font-weight: 400;
+  }
+  .marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+  }
+
+  /*--------------------------------------------*/
+
+  .b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+  
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+  
    
-}
-#top-3 h3{     
-    text-align: center;
-    padding: 10px;
-    font-size: 25px;
-    text-transform: uppercase;
-    color: #818181;
-}
-#top-3 p{     
-    text-align: center;
-    color: #818181;
-}
-.col-5{
-    width: 33%; /*largura*/
-    float: left;
-    position: relative;
-}
-/*----------------------------------------------TOP3--------------------------------------------------*/
-.bloco-imagem img {  /*Posição imagens do top 3*/
-    margin: 0 auto;
-    width: 100%;
-    height: auto;
-}
-.bloco-imagem { /*Borda do top 3*/
-    height: 300px;
-    border: 1px solid #c5c5c5;
-    /*padding-top: 15px;*/
-    padding-bottom: 15px;
-    margin-left: 1px;
-}
-.bloco-imagem b, p { /*Texto top 3*/
-    text-align: left;
-}
-.bloco-texto {
-    margin-top: 3em;
-}
-
-h3 {
-    font-weight: normal!important;
-}
-
-.bloco-imagens-texto {
-    background-color: #eeeeee;
-}
-
-.bloco-imagens-texto:after { /*Posição dos top 3*/
-    width: 100%;
-    display: inline-block;
-    content: '';
-    height: 70px;
-    background: #eeeeee;
-} 
-/*--------------------------------------------ANUNCIE AQUI!---------------------------------------------*/
-#anuncio{
-    clear:both;
-    background-color:#ffffff;
-    min-height: 200px;
-    width: 100%;
-}
-#anuncio h3{     
-    text-align:center;
-    font-size: 25px;
-    text-transform: uppercase;
-    color: #818181;
-}
-.col-4 {  /* Centralização nos logos dos anuncios*/
-    float:right;
-    width: 30%;
-    text-align: center;
-}
-.col-4 img { /* Efeito nos logos dos anuncios*/
-    cursor: pointer;
-     margin: 0 auto;
-     padding-top: 1em;
-     vertical-align: middle;
-}
-.col-4 img:hover { /* Efeito nos logos dos anuncios*/
-    margin-top: 10px!important;
-    position: relative!important;
- }
-
- .bloco-logos { /*altura dos anuncios*/
-    height: 170px;
-}
-
-.bloco-logos img { /*posição dos anuncios*/
-    margin-top: 50px;
-}
-
-/*-------------------------------------------------------RODAPÉ---------------------------------------------*/
-
-.footer h3 {
-    text-align: left;
-}
-
-.footer { /* imagem do primeiro rodapé*/
-    background-image: url('../img/footer.png');
-    color: #ffffff;
-}
-
-.footer-2 { /* imagem do segundo rodapé*/
-    background-image: url('../img/footer2.png');
-    color: #c1c1c1;
-    height: 90px;
-}
-
-
-.footer p {
-    width: 90%;
-    text-align: left;
-}
-
-.footer-2 p {
-    padding: 10px;
-    text-align: center;
-}
-
-.emailico:before {
-    content: '';
-    width:  17px;
-    height: 24px;
-    display: inline-block;
+  .rounded-4 { border-radius: .5rem; }
+  .rounded-5 { border-radius: 1rem; }
+  
+  .text-shadow-1 { text-shadow: 0 .125rem .25rem rgba(0, 0, 0, .25); }
+  .text-shadow-2 { text-shadow: 0 .25rem .5rem rgba(0, 0, 0, .25); }
+  .text-shadow-3 { text-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .25); }
+  
+  .card-cover {
     background-repeat: no-repeat;
-    padding-left: 5px;
-}  
-.emailico:before {
-    background-image: url('../img/email.png');
-}  
-
+    background-position: center center;
+    background-size: cover;
+  }
